@@ -5,7 +5,7 @@ The script performs these functions:
 
 1) reads in data from the training and testing directories,
 2) reads in activites and activitiy descriptions,
-3) determines which variabls from the original dataset are of interest here, namely those  involving mean(0 adn std(),
+3) determines which variabls from the original dataset are of interest here, namely those  involving mean() and std(),
 4) combines the training and testing datasets into one combined dataset,
 5) adds descriptive variable names to the dataset, 
 6) substitues the activity descriptions for the activity numbers,
