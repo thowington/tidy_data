@@ -1,3 +1,5 @@
+# CodeBook.md
+
 The tidy_data project uses data from the UCI HAR Dataset, available from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 
 The original dataset is comprised of measurements from smartphone accelerometers and gryroscopes worn by 30 participatns as they performed specific activities.  
