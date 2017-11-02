@@ -1,3 +1,9 @@
+require(plyr)
+require(reshape2)
+require(tidyr)
+require(dplyr)
+
+
 # import data from UCI HAR Dataset
 test_X_test <- read.table("UCI HAR Dataset/test/X_test.txt")
 test_Y_test <- read.table("UCI HAR Dataset/test/y_test.txt")
@@ -61,7 +67,6 @@ names(mean_std_table)[3:ncol(mean_std_table)] <- as.character(variable_names)
                         
 # join activity description
 names(activities) <- c("activity","description")
-library(plyr)
 new_table <- join(mean_std_table,activities)
 
 
@@ -71,11 +76,9 @@ new_table <- new_table[,1:81]
 
 
 # next - melt this table so that each record has subject, activity, typeofmeasure, mean/std, axis, and value
-library(reshape2)
 new2 <- melt(new_table, c("subject", "activity"),variable_names)
 
 # separate the activity values into 3 columns
-library(tidyr)
 new3 <- separate(data=new2, col=variable, into=c("signal","funct","axis"))
 
 # group and summarize data
@@ -90,6 +93,7 @@ new4$axis <- as.factor(new4$axis)
 
 # write out new tidy dataset
 write.table(new4, "tidy_measurements.txt")
+print("finished")
 
 
 
