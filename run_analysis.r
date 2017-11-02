@@ -92,7 +92,7 @@ new4$funct <- as.factor(new4$funct)
 new4$axis <- as.factor(new4$axis)
 
 # write out new tidy dataset
-write.table(new4, "tidy_measurements.txt")
+write.table(new4, "tidy_measurements.txt", row.name=FALSE)
 print("finished")
 
 
