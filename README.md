@@ -1,3 +1,4 @@
+# README
 The script "run_analysis.r" creates a tidy dataset from the UCI HAR Dataset.
 
 
